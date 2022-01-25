@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container col col-md-6  mt-3 p-5 ">
+    <div class="nadpis text-center pb-5">
+      <h1>Objednávkový formulář</h1>
+    </div>
+    <fieldset>
+      <legend>Výběr kol a počet</legend>
+
+      <div class="row">
+        <div class="col-6">
+          <input type="checkbox" name="horske" id="horske" value="500">
+          <label for="horske">horské kolo 500Kč/den</label>
+        </div>
+        <div class="col-6">
+          <input type="number" class="" name="horske_pocet" id="horske_ks" value="0">
+          <label for="horske_pocet">počet ks</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <input type="checkbox" name="horske" id="detske" value="200">
+          <label for="horske">dětské kolo 200Kč/den</label>
+        </div>
+        <div class="col-6">
+          <input type="number" name="horske_pocet" id="detske_ks" value="0">
+          <label for="horske_pocet">počet ks</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <input type="checkbox" name="horske" id="silnicni" value="1500">
+          <label for="horske">silniční 1.500Kč/den</label>
+        </div>
+        <div class="col-6">
+          <input type="number" name="horske_pocet" id="silnicni_ks">
+          <label for="horske_pocet">počet ks</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-6">
+          <input type="checkbox" name="horske" id="gravel" value="2500">
+          <label for="horske">gravel 2.500Kč/den</label>
+        </div>
+        <div class="col-6">
+          <input type="number" name="horske_pocet" id="gravel_ks">
+          <label for="horske_pocet">počet ks</label>
+        </div>
+      </div>
+
+    </fieldset>
+    <br>
+
+    <fieldset>
+      <legend>Počet dní</legend>
+
+      <select name="dny" id="pocet_dni">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+      </select>
+
+    </fieldset>
+    <br>
+    <fieldset class="form-group ">
+      <legend>Výběr nosiče</legend>
+      <input type="radio" name="nosic" id="nosic" value="1.05">
+      <label for="stresni"> střešní nosič (příplatek 5% ceny)</label> <br>
+      <input type="radio" name="nosic" id="tazne" value="1.1">
+      <label for="tazne"> nosič na tažné zařízení (příplatek 10% ceny)</label> <br>
+      <input type="radio" name="nosic" id="bez" value="1" checked>
+      <label for="bez"> bez nosiče</label> <br>
+    </fieldset>
+    <br>
+    <fieldset class="mb-3">
+      <legend>Cena objednávky</legend>
+      <div class="form-row">
+        <div class="col">
+          <input type="text" class="form-control " name="" id="celkovaCena">
+        </div>
+        <div class="col">
+          <input type="button" class="form-control bg-dark  text-white " value="Spočítat cenu" onclick="vypocet()">
+        </div>
+      </div>
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend>Kontaktní formulář</legend>
+      <div class="form-row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Jméno">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Přijmení">
+        </div>
+      </div>
+      <br>
+      <div class="form-row">
+        <div class="col col-sm-9">
+          <input type="text" class="form-control" placeholder="Ulice">
+        </div>
+        <div class="col col-sm-3">
+          <input type="text" class="form-control" placeholder="Číslo popisné">
+        </div>
+      </div>
+      <br>
+      <div class="form-row">
+        <div class="col col-sm-4">
+          <input type="text" class="form-control" placeholder="PSČ">
+        </div>
+        <div class="col col-sm-8">
+          <input type="text" class="form-control" placeholder="Město">
+        </div>
+      </div>
+      <br>
+      <div class="form-row">
+        <div class="col">
+          <input type="email" class="form-control" placeholder="Email" id="email1" value="">
+        </div>
+      </div>
+      <br>
+      <div class="form-row">
+        <div class="col">
+          <input type="tel" class="form-control" placeholder="Telefon">
+        </div>
+      </div>
+      <br>
+      <input type="button" value="Odeslat" onclick="odeslat()">
+    </fieldset>
+  </div>
+
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>
